@@ -1,0 +1,95 @@
+body{
+}
+
+header{
+    text-align: center;
+    background-color: white;
+    padding:10 100 10 100 px;
+   
+}
+
+.rooftop{
+    display: flex;
+    justify-content: space-between;
+}
+
+.rooftop-right {
+    float: right; /* 가운데로 이동 */
+}
+  
+.main-icon {
+    width: 50px;
+    height: 50px;
+    margin-left: 10%;
+}
+
+
+.MainTitle{
+    background-color: white;
+    font-size: 50px;
+    font-weight: bold;
+    color: red;
+}
+
+.searchBox {
+    width: 200%;
+    height: 40px;
+    border: none;
+    outline: none;
+    margin-left: 20px;
+    padding: 0 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+
+    background-image: url('../resource/find.png');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position-x:95%;
+    background-position-y: center;
+}
+  
+.searchBox:focus {
+  box-shadow: 0 0 15px 0 rgba(66, 133, 244, 0.8);
+}
+
+.top-nav{
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+}
+
+.top-nav li{
+  height : 50px;
+  width: 100px;
+  margin-right: 10px;
+}
+  
+.content {
+    background-color: lightslategray;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-aside {
+    background-color: darkgray;
+    width: 15%;
+}
+
+.left-Category{
+    background-color: aquamarine;
+    text-align: center;
+    margin: 4px;
+    height: 10%;
+}
+.post-section {
+    background-color: antiquewhite;
+    width: 50%;
+    overflow-y: auto;
+}
+.right-aside {
+    width: 20%;
+    background-color: ivory;
+}
