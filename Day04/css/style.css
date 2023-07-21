@@ -4,7 +4,8 @@ body{
 header{
     text-align: center;
     background-color: white;
-    padding:10 100 10 100 px;
+    padding-left: 45px;
+    padding-right: 45px;
    
 }
 
@@ -16,7 +17,7 @@ header{
 .rooftop-right {
     float: right; /* 가운데로 이동 */
 }
-  
+
 .main-icon {
     width: 50px;
     height: 50px;
@@ -43,7 +44,7 @@ header{
     font-size: 16px;
     text-align: center;
     transition: all 0.3s ease;
-
+    background-color: rgb(230, 230, 230);
     background-image: url('../resource/find.png');
     background-repeat: no-repeat;
     background-size: 30px;
@@ -66,7 +67,14 @@ header{
   width: 100px;
   margin-right: 10px;
 }
-  
+
+main{
+    width: 1200px;
+    margin: auto;
+    padding-left : 50px;
+    padding-right : 50px;
+}
+
 .content {
     background-color: lightslategray;
     display: flex;
@@ -93,3 +101,16 @@ header{
     width: 20%;
     background-color: ivory;
 }
+
+.post-list ul {
+    text-align: center;
+    list-style-type: none; /* 리스트 불릿 제거 */
+}
+
+.post-list ul li {
+    display: inline-block; /* li 요소를 인라인-블록 요소로 만들어 가로로 배치 */
+    width: 300px;
+    height: 100px;
+    margin: 10px;
+}
+

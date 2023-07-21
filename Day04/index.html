@@ -33,42 +33,80 @@
         </ul>
     </nav>
 
-    <!-- 카테고리 nav를 왼쪽에 세로로 만들것 (CSS 활용)-->
-
-    <main class = "content">
-        <aside class = "left-aside">
-            <div class = "left-Category"><button>작은카테고리1</button></div>
-            <div class = "left-Category"><button>작은카테고리2</button></div>
-            <div class = "left-Category"><button>작은카테고리3</button></div>
-            <div class = "left-Category"><button>작은카테고리4</button></div>
-        </aside>
+    <main>
+        <section class = "content">
+            <aside class = "left-aside">
+                <div class = "left-Category"><button>작은카테고리1</button></div>
+                <div class = "left-Category"><button>작은카테고리2</button></div>
+                <div class = "left-Category"><button>작은카테고리3</button></div>
+                <div class = "left-Category"><button>작은카테고리4</button></div>
+            </aside>
+            
+            <article class = "post-section">
+                <div class="post">
+                    <h3>포스트 제목</h3>
+                    <img src ="..." alt="PostImage">
+                    <p> ~저희 동네 당근마켓에 이런게 올라왔는데 이거 어떤가요?</p>
+                </div>
+                <article class = "comment"> 
+                    <h4>댓글1</h4>
+                    <p>별로같은데요</p>
+                </article>
+                <article class = "comment">
+                    <h4>댓글2</h4>
+                    <p>조금 비싼듯</p>
+                </article>
+            </article>
         
-        <article class = "post-section">
-            <div class="post">
-                <h3>포스트 제목</h3>
-                <img src ="..." alt="PostImage">
-                <p> ~저희 동네 당근마켓에 이런게 올라왔는데 이거 어떤가요?</p>
+            <aside class = "right-aside">
+                <div class = "productInfo">
+                    <h4>제품명</h4>
+                    <p>제품에 대한 과거 글</p>
+                    <img src="..." alt="과거 가격추이">
+                </div>
+            </aside>
+        </section>
+        <hr>
+        <section class = "post-list">
+            <h1>오늘의 인기글</h1>
+            <div>
+                <ul>
+                    <li>
+                        <div class = "card">
+                            <img src = "..." alt="thumb-nail">
+                            <div class = "card-content">
+                                <h3>Card title</h3>
+                                <p>description</p>
+                            </div>
+                        </div> 
+                    </li>
+                    <li>
+                        <div class = "card">
+                            <img src = "..." alt="thumb-nail">
+                            <div class = "card-content">
+                                <h3>Card title</h3>
+                                <p>description</p>
+                            </div>
+                        </div> 
+                    </li>
+                    <li>
+                        <div class = "card">
+                            <img src = "..." alt="thumb-nail">
+                            <div class = "card-content">
+                                <h3>Card title</h3>
+                                <p>description</p>
+                            </div>
+                        </div> 
+                    </li>
+                </ul>
             </div>
-            <article class = "comment"> 
-                <h4>댓글1</h4>
-                <p>별로같은데요</p>
-            </article>
-            <article class = "comment">
-                <h4>댓글2</h4>
-                <p>조금 비싼듯</p>
-            </article>
-        </article>
-    
-        <aside class = "right-aside">
-            <div class = "productInfo">
-                <h4>제품명</h4>
-                <p>제품에 대한 과거 글</p>
-                <img src="..." alt="과거 가격추이">
-            </div>
-        </aside>
+
+            
+        </section>
     </main>
 
     <hr>
+
     <footer>
         <span>Copyright</span>
         <span>contact</span>
