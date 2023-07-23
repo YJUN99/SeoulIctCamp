@@ -1,0 +1,224 @@
+body{
+}
+
+header{
+    text-align: center;
+    background-color: white;
+    margin-left: 200px;
+    margin-right : 200px;
+
+    padding : 10px;
+}
+/*
+    ---가장 최상위 roofTop 부분에 대한 css 영역입니다.---
+*/
+.rooftop{
+    display: flex;
+    justify-content: space-between;
+}
+
+.rooftop button{
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0);
+    border:none;
+}
+
+.favorites-icon{
+    margin-right: 5px;
+    width : 20px;
+    height : 20px;
+}
+.rooftop-left{
+    width: 84px;
+    height: 25px;
+}
+
+.rooftop-right {
+    display: flex;
+    float: right; /* 가운데로 이동 */
+}
+
+.rooftop p{
+    color : gray;
+}
+
+.rooftop a{
+    text-decoration: none;
+}
+
+.rooftop p:hover{
+    border-color: rgb(75, 52, 52);
+    box-shadow: 0 8px 16px rgba(76, 175, 80, 0.2);
+}
+/*
+    --------------------------------------------------
+    웹페이지의 아이콘, 검색창 등 영역에 대한 CSS 영역입니다.
+*/
+.main-title{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    padding-top : 50px;
+}
+
+.main-title button{
+    border : none;
+}
+.main-icon {
+    width: 217px;
+    height: 67px;
+}
+
+.searchBox-container{
+    padding-left : 100px;
+    flex-grow: 1;
+}
+
+.searchBox-container form{
+    display: inline-block;
+}
+.searchBox {
+    box-sizing: border-box;
+    width: 600px;
+    height: 40px;
+
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    border-radius: 16px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    text-align: center;
+
+
+    background-color: rgb(230, 230, 230);
+    background-image: url('../resource/find.png');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position-x:95%;
+    background-position-y: center;
+}
+  
+.searchBox:focus {
+    box-shadow: 0 0 15px 0 black;
+}
+
+
+.top-nav-class{
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+}
+
+.top-nav{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px; 
+}
+
+.top-nav li{
+    height : 50px;
+    width: 100px;
+}
+
+.top-nav button{
+    width: 200px; 
+    height: 50px; 
+    border: none;
+    font-size: 1rem;
+    color: white;
+    background-color: black;
+}
+main{
+    width: 1200px;
+    margin : auto;
+    padding-left : 20px;
+    padding-right : 2ch;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content{
+    border-style: solid;
+    border-width: 1px 0px 1px 0px;
+    border-color: lightgray;
+}
+
+.left-aside {
+    width : 200px;
+    border-style: solid;
+    border-color: lightgray;
+    border-width: 0px 1px 0px 0px;
+}
+
+.left-Category{
+    height : 50px;
+    width : 200px;
+    border-style: solid;
+    border-color: lightgray;
+    border-width: 0px 0px 1px 0px;
+    text-align: center;
+}
+
+.left-Category button{
+    width:200px;
+    height:50px;
+    background-color: rgba(255,255,255,0);
+    border-style : none;
+}
+.left-Category button:hover{
+    background-color: lightgray;
+}
+.post-section {
+    background-color: rgba(224,200,191,0.3);
+    width: 1000px;
+    overflow-y: auto;
+}
+
+.post-content{
+    padding : 5px 5px 5px 5px;
+}
+
+.post-top{
+    height: 200px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+.post-bottom{
+    display: flex;
+    border-style: solid;
+    border-color: lightgray;
+    border-width: 1px 0px 0px 0px;
+}
+
+.comments-section{
+    width:700px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.right-aside {
+    width: 20%;
+    background-color: ivory;
+}
+
+.post-list ul {
+    text-align: center;
+    list-style-type: none; /* 리스트 불릿 제거 */
+}
+
+.post-list ul li {
+    display: inline-block; /* li 요소를 인라인-블록 요소로 만들어 가로로 배치 */
+    width: 300px;
+    height: 100px;
+    margin: 10px;
+}
+
