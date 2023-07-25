@@ -1,10 +1,10 @@
-// 오목판 배열 생성
+// 오목판 배열 생성 ---------------------
 let Omok_Board = new Array(31);
 for(let i = 0; i < 31; i++){
     Omok_Board[i] = new Array(31);
 }
-
-// 오목판 init
+// ------------------------------------
+// -----오목판 init--------------------- 
 Omok_Board[0][0] = '┌'.padStart(2,' ')
 
 for(let i = 1; i < 31; i++){
@@ -23,8 +23,7 @@ for(let i = 1; i < 31; i++){
         Omok_Board[i][j] = '+'.padStart(2,' ');
     }
 }
-
-
+// ------------------------------------
 // 현재 누구의 순서인지 return 1 : 검은색 
 //                    return 0 : 흰색
 function func_is_black_turn(){
@@ -105,9 +104,34 @@ function func_Omok_Detection(_inputX, _inputY, StoneColor){
     return win_flag;
 }
 
+//------------------------------------
 let indicator_section = new Array(8);
 indicator_section[0] = "##################################################";
 indicator_section[7] = "##################################################";
+
+function func_set_indicator(flag){
+    indicator_section[0] = "##################################################";
+    indicator_section[7] = "##################################################";
+    switch (flag){
+        case "init":
+            indicator_section[1] = "선공은 ● 부터입니다. !!!"
+            indicator_section[2] = "6목 허용 X, 쌍3, 쌍4 허용"
+            indicator_section[3] = "";
+            indicator_section[4] = "기본 입력은 형식은 다음과 같습니다. (X 좌표, Y 좌표)  예시:(K,12) "
+            indicator_section[5] = "괄호를 빼먹지 마세요 ( )"
+            indicator_section[6] = "지금은 ● 차례 입니다."
+            break;
+        case "already_placed":
+            indicator_section[1] = ""
+            indicator_section[2] = "해당 지점에 돌이 이미 존재합니다."
+            indicator_section[3] = ""
+            indicator_section[4] = ""
+            indicator_section[5] = ""
+            indicator_section[6] = `지금은${curSymbol} 차례 입니다.`
+    }
+}
+
+
 function func_print_Omok_Board(){
     console.clear();
     for(let i = 0; i < 8; i++){
@@ -124,15 +148,9 @@ function func_print_Omok_Board(){
     }
 }
 
-
 let count = 0;
 console.clear();
-indicator_section[1] = "선공은 ● 부터입니다. !!!"
-indicator_section[2] = "6목 허용 X, 쌍3, 쌍4 허용"
-indicator_section[3] = "";
-indicator_section[4] = "기본 입력은 형식은 다음과 같습니다. (X 좌표, Y 좌표)  예시:(K,12) "
-indicator_section[5] = "괄호를 빼먹지 마세요 ( )"
-indicator_section[6] = "지금은 ● 차례 입니다."
+func_set_indicator("init");
 func_print_Omok_Board();
 
 // 사용자 입출력을 위한 코드
@@ -145,6 +163,8 @@ const r1 = readline.createInterface(
     }
 );
 
+let curSymbol
+let next_curSymbol
 r1.on('line',(input)=>{
     console.clear();
 
@@ -157,17 +177,12 @@ r1.on('line',(input)=>{
     inputX = (inputX >= 65 && inputX <= 90) ? inputX - 64 : inputX - 96 + 26;
     const inputY = parseInt(inputY_str);
 
-    const curSymbol = func_is_black_turn() ? ' ○' : ' ●';
-    const next_curSymbol = func_is_black_turn() ? ' ●' : ' ○';
+    curSymbol = func_is_black_turn() ? ' ○' : ' ●';
+    next_curSymbol = func_is_black_turn() ? ' ●' : ' ○';
     indicator_section[1] = curSymbol + " 가 " + "입력한 좌표" + input;
-    if(Omok_Board[inputY][inputX] != ' +'){
-        indicator_section[1] = ""
-        indicator_section[2] = "해당 지점에 돌이 이미 존재합니다."
-        indicator_section[3] = ""
-        indicator_section[4] = ""
-        indicator_section[5] = ""
-        indicator_section[6] = `지금은${curSymbol} 차례 입니다.`
 
+    if(Omok_Board[inputY][inputX] != ' +'){
+        func_set_indicator("already_placed")
         func_print_Omok_Board();
     }
     else{
