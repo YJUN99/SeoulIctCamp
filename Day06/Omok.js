@@ -27,19 +27,19 @@ for(let i = 1; i < 31; i++){
 
 // 현재 누구의 순서인지 return 1 : 검은색 
 //                    return 0 : 흰색
-function is_black_turn(){
+function func_is_black_turn(){
     return count % 2 ? 1 : 0;
 }
 
 // 순서에 따라 돌을 놓습니다.
 function func_placeStone(_input_X,_input_Y){
-    const StoneColor = is_black_turn() ? '○' : '●';
+    const StoneColor = func_is_black_turn() ? '○' : '●';
     Omok_Board[_input_Y][_input_X] = StoneColor.padStart(2,' ');
 }
 
 // 오목인지 판별하는 함수
 function func_isOmok(_inputX,_inputY){
-    let StoneColor = is_black_turn() ? '○' : '●';
+    let StoneColor = func_is_black_turn() ? '○' : '●';
     StoneColor = StoneColor.padStart(2,' ');
 
     // Omok_Detection 함수 호출 
@@ -106,7 +106,13 @@ function func_Omok_Detection(_inputX, _inputY, StoneColor){
     return win_flag;
 }
 
+let indicator_section = new Array(7);
+indicator_section[0] = "########################################";
+indicator_section[6] = "########################################";
 function func_print_Omok_Board(){
+    for(let i = 0; i < 7; i++){
+        console.log(indicator_section[i]);
+    }
     let boardLine = "";
     for(let i = 0; i < 31; i++){
         boardLine = "";
@@ -118,6 +124,15 @@ function func_print_Omok_Board(){
     }
 }
 
+
+let count = 0;
+console.clear();
+indicator_section[1] = "선공은 ● 부터입니다. !!!"
+indicator_section[2] = "선공은 ● 부터입니다. !!!"
+indicator_section[3] = "선공은 ● 부터입니다. !!!"
+func_print_Omok_Board();
+console.log("다음 돌을 놓을 위치를 입력하세요. 예) (A,1)");
+
 // 사용자 입출력을 위한 코드
 const readline = require('readline');
 
@@ -128,10 +143,6 @@ const r1 = readline.createInterface(
     }
 );
 
-let count = 0;
-console.clear();
-func_print_Omok_Board();
-console.log("다음 돌을 놓을 위치를 입력하세요. 예) (A,1)");
 r1.on('line',(input)=>{
     console.clear();
 
@@ -156,7 +167,7 @@ r1.on('line',(input)=>{
         func_print_Omok_Board();
         console.log("다음 돌을 놓을 위치를 입력하세요. 예) (A,1)");
         count++;
-        if(count == 11){
+        if(count == 30*30){
             r1.close();
         }
     }
