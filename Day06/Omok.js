@@ -44,14 +44,6 @@ function func_isOmok(_inputX,_inputY){
 
     // Omok_Detection 함수 호출 
     const win_flag = func_Omok_Detection(_inputX, _inputY, StoneColor);
-    if(win_flag == 1){
-        console.log("##################################");
-        console.log(`######${StoneColor}의 승리 ~~~######`);
-        console.log("##################################");
-    }
-    else{
-        console.log("아직 승리가 아닙니다.")
-    }
     return win_flag == 1 ? StoneColor : -1;
 }
 
@@ -97,20 +89,28 @@ function func_Omok_Detection(_inputX, _inputY, StoneColor){
             default:
                 break;
         }
-
-        console.log(`${direction_str} 오목카운트: `, omokCount);
+        indicator_section[i + 2] = `${direction_str} 오목카운트: ${omokCount}`
         if(omokCount == 5){
             win_flag = 1;
+            indicator_section[1]="";
+            indicator_section[2]="";
+            indicator_section[3]="";
+            indicator_section[4]=`          ${StoneColor}의 승리~~          `;
+            indicator_section[5]="";
+            indicator_section[6]="";
+
+            return win_flag;
         }
     }
     return win_flag;
 }
 
-let indicator_section = new Array(7);
-indicator_section[0] = "########################################";
-indicator_section[6] = "########################################";
+let indicator_section = new Array(8);
+indicator_section[0] = "##################################################";
+indicator_section[7] = "##################################################";
 function func_print_Omok_Board(){
-    for(let i = 0; i < 7; i++){
+    console.clear();
+    for(let i = 0; i < 8; i++){
         console.log(indicator_section[i]);
     }
     let boardLine = "";
@@ -128,10 +128,12 @@ function func_print_Omok_Board(){
 let count = 0;
 console.clear();
 indicator_section[1] = "선공은 ● 부터입니다. !!!"
-indicator_section[2] = "선공은 ● 부터입니다. !!!"
-indicator_section[3] = "선공은 ● 부터입니다. !!!"
+indicator_section[2] = "6목 허용 X, 쌍3, 쌍4 허용"
+indicator_section[3] = "";
+indicator_section[4] = "기본 입력은 형식은 다음과 같습니다. (X 좌표, Y 좌표)  예시:(K,12) "
+indicator_section[5] = "괄호를 빼먹지 마세요 ( )"
+indicator_section[6] = "지금은 ● 차례 입니다."
 func_print_Omok_Board();
-console.log("다음 돌을 놓을 위치를 입력하세요. 예) (A,1)");
 
 // 사용자 입출력을 위한 코드
 const readline = require('readline');
@@ -147,7 +149,6 @@ r1.on('line',(input)=>{
     console.clear();
 
     //console.log("┌-------------------------------┐")
-    console.log("입력된 좌표 " ,input);
     const parsedInput = input.slice(1,-1).split(',');
     let inputX_str = parsedInput[0];
     const inputY_str = parsedInput[1];
@@ -155,17 +156,26 @@ r1.on('line',(input)=>{
     let inputX = inputX_str.charCodeAt(0);
     inputX = (inputX >= 65 && inputX <= 90) ? inputX - 64 : inputX - 96 + 26;
     const inputY = parseInt(inputY_str);
-    
+
+    const curSymbol = func_is_black_turn() ? ' ○' : ' ●';
+    const next_curSymbol = func_is_black_turn() ? ' ●' : ' ○';
+    indicator_section[1] = curSymbol + " 가 " + "입력한 좌표" + input;
     if(Omok_Board[inputY][inputX] != ' +'){
+        indicator_section[1] = ""
+        indicator_section[2] = "해당 지점에 돌이 이미 존재합니다."
+        indicator_section[3] = ""
+        indicator_section[4] = ""
+        indicator_section[5] = ""
+        indicator_section[6] = `지금은${curSymbol} 차례 입니다.`
+
         func_print_Omok_Board();
-        console.log("이미 돌이 존재합니다.");
-        console.log("다음 돌을 놓을 위치를 입력하세요. 예) (A,1)");
     }
     else{
+        indicator_section[6] = `지금은${next_curSymbol} 차례 입니다.`
         func_placeStone(inputX,inputY);
         func_isOmok(inputX, inputY);
         func_print_Omok_Board();
-        console.log("다음 돌을 놓을 위치를 입력하세요. 예) (A,1)");
+        console.log("다음 돌을 놓을 위치를 입력하세요. 예) (K,12)");
         count++;
         if(count == 30*30){
             r1.close();
