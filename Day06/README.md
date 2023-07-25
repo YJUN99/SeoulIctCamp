@@ -172,3 +172,30 @@ function func_print_Omok_Board(){
 ```
 
 ### 입력 받기
+
+### 
+
+```jsx
+r1.on('line',(input) => {
+    const parsedInput = input.slice(1,-1).split(',');
+
+    let inputX_str = parsedInput[0];
+    let inputY_str = parsedInput[1];
+    inputX_str = inputX_str.charCodeAt(0);  // ASCII to Number
+    
+    const inputX = (inputX_str >= 65 && inputX_str <= 90) ? inputX_str - 64 : inputX_str - 96 + 26; // Input X 는 A~Z a~e 까지 1~30 으로 매핑
+    const inputY = parseInt(inputY_str);
+
+    prevPlayer = func_is_black_turn() ? ' ○' : ' ●';
+    nowPlayer = func_is_black_turn() ? ' ●' : ' ○';
+
+    if(func_placeStone(inputX,inputY)){
+        func_isOmok(inputX, inputY);
+    }
+    func_print_Omok_Board();
+})
+```
+
+- 입력을 받을 때 마다 실행되는 함수
+- 사용자 입력이 (A, 1) 형식으로 주어지기 때문에
+- 맨 앞과 맨 뒤 괄호를 slice로 없애고, split(’,’) 으로 나눠 줍니다.
