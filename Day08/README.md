@@ -124,8 +124,6 @@ person.fullId();
 
 ### 예제 코드4
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6403e23a-ec1b-411a-9fdf-8dc2274b938e/Untitled.png)
-
 - 브라우저의 디버깅 도구를 사용해 this의 동작을 알 수 있다.
 
 ```html
@@ -160,6 +158,7 @@ button.addEventListener('click',()=>{
     person.fullId();
 });
 ```
+<img src = "image/image1.png" width = 70% height = 80%>
 
 - 테스트를 하기 위한 간단한 HTML 파일과 JS 파일이다. (js 파일을 Object2.js를 재활용 하였다.)
 - 이 HTML 문서엔 Button을 하나 생성하고 해당 버튼을 누르면 person.fullId가 실행된다.
