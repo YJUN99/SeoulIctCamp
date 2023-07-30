@@ -1,0 +1,171 @@
+main{
+    width: 1600px;
+    margin : auto;
+    padding-left : 20px;
+    padding-right : 2ch;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    border-style: solid;
+    border-width: 1px 0px 1px 0px;
+    border-color: lightgray;
+}
+
+.left-aside nav {
+    /* 네비게이션 스타일링 */
+}
+
+.left-Category{
+    height : 50px;
+    width : 200px;
+    text-align: center;
+}
+
+.left-Category li{
+    list-style-type: none;
+}
+
+.left-Category button{
+    width:200px;
+    height:50px;
+    background-color: rgba(255,255,255,0);
+    border-style: solid;
+    border-color: lightgray;
+    border-width: 1px 0px 0px 0px;
+}
+
+.left-Category button:hover{
+    background-color: lightgray;
+}
+
+.post-section {
+    position: relative;
+    background-color: rgba(224,200,191,0.3);
+    height: 600px;
+    width: 1000px;
+    margin: auto;
+    display: flex; 
+    flex-direction: row;
+    align-items: flex-start; 
+    overflow-y: auto;
+}
+
+.post-top {
+    width:90%;
+    margin: 20px 20px 20px 20px;
+}
+
+.post-top h2{
+    background-color: rgba(255,255,255,0);
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+    text-align: left;
+}
+
+.post-content {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-areas: 
+    "image description"
+    "image comments";
+}
+
+.post-content img {
+    grid-area: image;
+    width: 300px;
+    height: 400px;
+    border: 1px solid black;
+    margin: 10px 0;
+    object-fit: cover;
+}
+
+.post-description {
+    grid-area: description;
+    width: 560px; 
+    height: 150px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0px 35px 0px 35px; 
+    background-color: #f8f8f8;
+}
+
+.post-description-content{
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+.comments-section{
+    grid-area: comments;
+    width:400px;
+    max-height: 200px;
+    overflow-y: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 5px 35px 0px 35px; 
+    text-align: left;
+}
+
+.post-description {
+    position: relative;
+}
+
+.detail-view {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.post-bottom {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 5px 35px 0px 35px; 
+}
+
+.button-section{
+    display: flex;
+    flex-direction: column;
+}
+
+.button-section button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-color : rgba(255,255,255,0);
+    background-color: rgba(255,255,255,0);
+    width : 80px;
+    height: 80px;
+}
+
+.button-section img{
+    border-color : rgba(255,255,255,0);
+
+    width : 60px;
+    height: 60px;
+}
+
+.button-section button:hover{
+    background-color: rgba(255, 154, 154,0.2);
+}
+
+
+.right-aside {
+    width: 20%;
+    background-color: ivory;
+}
+
+.post-list ul {
+    text-align: center;
+    list-style-type: none; /* 리스트 불릿 제거 */
+}
+
+.post-list ul li {
+    display: inline-block; /* li 요소를 인라인-블록 요소로 만들어 가로로 배치 */
+    width: 300px;
+    height: 100px;
+    margin: 10px;
+}

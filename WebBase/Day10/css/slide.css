@@ -1,0 +1,11 @@
+.post-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .post-section {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+  

@@ -52,7 +52,7 @@ for(let i = 1; i < 31; i++){
 
 - 오목판의 초기 상태로 초기화 합니다.
 
-!https://www.alpharithms.com/s3/assets/img/ascii-chart/ascii-table-alpharithms-scaled.jpg
+<img src = "https://www.alpharithms.com/s3/assets/img/ascii-chart/ascii-table-alpharithms-scaled.jpg" width=50% height=50%>
 
 - A~B , a~z 까지 1행에 넣기 위한 과정
 - decimal 기준 65 ~ 90 까지 ASCII 로 대문자 알파벳에 해당합니다.
@@ -75,9 +75,6 @@ console.log(str.padStart(3,"b")); // 출력 : "bba"
 
 - 1열 역시 1~30 까지 string 변환 후 .padStart method로 **보기 쉽게** formatting 해준다.
 - 나머지 영역 또한 ‘+’.padStart(2,’ ‘); 을 사용한다.
-    
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f743edff-9903-4e32-920a-74856ccbda8e/Untitled.png)
-    
 
 ### Player의 차례를 판단
 

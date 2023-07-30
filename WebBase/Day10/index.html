@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>이거 어때::중고물품 판별 커뮤니티</title>
+    <link rel="stylesheet" href="./css/head.css"/>
+    <link rel="stylesheet" href="./css/nav.css"/>
+    <link rel="stylesheet" href="./css/main.css"/>
+    <link rel="stylesheet" href="./css/modal.css"/>
+    <link rel="stylesheet" href="./css/slide.css"/>
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+    <style>
+        * {
+            font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+        }
+    </style>
+</head>
+<body class="clearfix">
+    <header>
+        <div class="rooftop">
+            <button class="favorites-button">
+                <img class="favorites-icon"src="resource/star.png" alt="Favorites Icon"><span>즐겨찾기</span></button>
+            <div class="rooftop-right">
+                <a href="html/login-page.html"><button class="login"><span>로그인</span></button></a>
+                <a href="html/my-post.html"><button class="my-post"><span>내 글</span></button></a>
+            </div>
+        </div>
+        <nav class="main-title">
+            <a href=""><img class="main-icon" src="resource/main-logo.png" alt="Logo Image"></a>
+            <form><input class="searchBox" type="search" aria-label="Search"></form>
+        </nav>
+    </header>
+    <hr>
+    <nav class="top-nav-class">
+        <ul class="top-nav">
+            <li><a href="#큰카테고리1"><button>이거 어떤가요?</button></a></li>
+            <li><a href="#큰카테고리2"><button>이거 팝니다!</button></a></li>
+            <li><a href="#큰카테고리3"><button>이거 좋아요!</button></a></li>
+            <li><a href="#큰카테고리4"><button>자유게시판</button></a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section class="content">
+            <aside class="left-aside">
+                <nav>
+                    <ul class="left-Category">
+                        <li><a href=""><button>Home</button></a></li>
+                        <li><a href=""><button>Popular</button></a></li>
+                        <li><a href=""><button>Home</button></a></li>
+                        <li><a href=""><button>Popular</button></a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <div class="post-container">
+                <article class="post-section">
+                    <div class="post-top">
+                        <h2>포스트 제목</h2>
+                        <div class="post-content">
+                            <img id = "post-main-image" class="post-main-image" src="resource/Carrot.jpg" alt="Post Image">
+                            <div class="post-description">
+                                <p class="post-description-content"> ~저희 동네 당근마켓에 이런게 올라왔는데 이거 어떤가요?</p>
+                                <button class="detail-view">자세히보기</button>    
+                            </div>
+                            
+                            <div class = "post-bottom">
+                                <section class="comments-section">
+                                    <article class="comment"><h3>댓글1</h3><p>별로같은데요</p></article>
+                                    <article class="comment"><h3>댓글2</h3><p>조금 비싼듯</p></article>
+                                    <article class="comment"><h3>댓글3</h3><p>흠...</p></article>
+                                    <article class="comment"><h3>댓글4</h3><p>나였으면 딴거 산다</p></article>
+                                </section>
+                                <section class="button-section">
+                                    <button class="comment-button" title="댓글 달기">
+                                        <img src="resource/comment.png" alt="Comment">
+                                        <span class="comment-count">0</span>
+                                    </button>
+                                    <button class="like-button title="좋아요 표시">
+                                        <img src="resource/good.png" alt="Good">
+                                        <span class="like-count">0</span>
+                                    </button>
+                                    <button class="dislike-button title="싫어요 표시">
+                                        <img src="resource/bad.png" alt="Bad">
+                                        <span class="dislike-count">0</span>
+                                    </button>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <aside class="right-aside">
+                <div class="productInfo">
+                    <h3>제품명</h3>
+                    <p>제품에 대한 과거 글</p>
+                    <img src="" alt="과거 가격추이">
+                </div>
+            </aside>
+        </section>
+        <section class="post-list">
+            <h2>오늘의 인기글</h2>
+            <ul>
+                <!-- 각각의 카드를 article 태그로 감싸고, 목록을 리스트로 변경 -->
+                <li>
+                    <article class="card">
+                        <img src="" alt="Thumbnail">
+                        <div class="card-content">
+                            <h3>Card title</h3>
+                            <p>description</p>
+                        </div>
+                    </article>
+                </li>
+                <!-- 추가 카드 -->
+            </ul>
+        </section>
+    </main>
+    <hr>
+    <footer>
+        <span>Copyright</span>
+        <span>contact</span>
+        <span>git YJUN</span>
+        <a href="https://www.reddit.com/">참고 웹사이트1 레딧</a>
+        <a href="https://m.bunjang.co.kr/">참고 웹사이트2 번개장터</a>
+    </footer>
+
+    <!-- 모달 -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <img class="modal-content-image" id="modal-image">
+            <div class="modal-content-right">
+                <p class="modal-content-text" id="modal-text"></p>
+                <section class="modal-comment-section" id="modal-comment-section">
+                </section>
+            </div>
+        </div>
+        <span class="close">&times;</span>
+    </div>
+
+    <script src="js/like_dislike.js"></script>
+    <script src="js/modal.js"></script>
+</body>
+</html>
