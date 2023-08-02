@@ -9,7 +9,7 @@
   
 ---
 ### 테이블 구상하기
-
+![image](MyfirstDBSchema.png)
 1. User (사용자)
    - UserID
      - 기본키, 유저각각을 구분짓기 위한 키 입니다. (로그인시 사용됩니다.)
@@ -76,5 +76,3 @@
      -  INT 
    - CategoryName
      - 실제 CategoryID 에 따른 카테고리 이름 (전자제품, 의류, 자전거 ...) 
-
-### Label 부분을 지우기.
