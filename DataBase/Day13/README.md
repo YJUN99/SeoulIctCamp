@@ -9,7 +9,7 @@
   
 ---
 ### 테이블 구상하기
-![image](MyfirstDBSchema.png)
+![image](MyFirstDBSchema.png)
 1. User (사용자)
    - UserID
      - 기본키, 유저각각을 구분짓기 위한 키 입니다. (로그인시 사용됩니다.)
