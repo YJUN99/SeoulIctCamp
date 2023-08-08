@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Post</title>
+</head>
+<body>
+    <h2>Create a New Post</h2>
+    
+    <!--enctype="multipart/form-data" 는 사진 업로드에 필요함-->
+    <form action="/create-post" method="post" enctype="multipart/form-data">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required><br><br>
+
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="userid">UserID:</label>
+        <input type="text" id="userid" name="userid" required><br><br>
+
+        <label for="category">Category:</label>
+        <select id="category" name="categoryid">
+            <option value="1">Bicycle</option>
+            <option value="2">Electronic Product</option>
+            <option value="3">Clothes</option>
+        </select><br><br>
+
+        <label for="image">Upload Image:</label>
+        <input type="file" id="image" name="image"><br><br>
+
+        <input type="submit" value="Post">
+    </form>
+</body>
+</html>
