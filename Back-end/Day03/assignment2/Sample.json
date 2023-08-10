@@ -1,0 +1,40 @@
+{
+    "users": [
+      {
+        "userId": 1,
+        "firstName": "AAAAA",
+        "lastName": "as23",
+        "phoneNumber": "123456",
+        "emailAddress": "AAAAA@test.com",
+        "homepage": "https://velog.io/@yjun99/AI-웹개발-취업-캠프-정보통신산업진흥원-SW-기초-과정-2주차월-과제"
+      },
+      {
+        "userId": 2,
+        "firstName": "BBBB",
+        "lastName": "h5jdd",
+        "phoneNumber": "123456",
+        "homepage": "https://velog.io/@yjun99/AI-웹개발-취업-캠프-정보통신산업진흥원-SW-기초-과정-2주차수-과제"
+      },
+      {
+        "userId": 3,
+        "firstName": "CCCCC",
+        "lastName": "2dhbs",
+        "phoneNumber": "33333333",
+        "homepage": "https://velog.io/@yjun99/AI-웹개발-취업-캠프-정보통신산업진흥원-SW-기초-과정-2주차목-과제"
+      },
+      {
+        "userId": 4,
+        "firstName": "DDDDD",
+        "lastName": "bacasd",
+        "phoneNumber": "222222222",
+        "homepage": "https://velog.io/@yjun99/AI-웹개발-취업-캠프-정보통신산업진흥원-SW-기초-과정-2주차금-과제"
+      },
+      {
+        "userId": 5,
+        "firstName": "EEEEE",
+        "lastName": "asdfasdf",
+        "phoneNumber": "111111111",
+        "homepage": "https://velog.io/@yjun99/AI-웹개발-취업-캠프-정보통신산업진흥원-SW-기초-과정-3주차월-과제"
+      }
+    ]
+  }
