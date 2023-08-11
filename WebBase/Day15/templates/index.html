@@ -37,6 +37,7 @@
             <li><a href="#큰카테고리2"><button>이거 팝니다!</button></a></li>
             <li><a href="#큰카테고리3"><button>이거 좋아요!</button></a></li>
             <li><a href="#큰카테고리4"><button>자유게시판</button></a></li>
+            <li><a href="/new-post" class="new-post-button"><button>새 글 작성</button></a></li>
         </ul>
     </nav>
     
@@ -57,10 +58,9 @@
                     <div class="post-top">
                         <h2>포스트 제목</h2>
                         <div class="post-content">
-                            <img id = "post-main-image" class="post-main-image" src="resource/Carrot.jpg" alt="Post Image">
+                            <img id = "post-main-image" class="post-main-image" src="../static/uploads_images/Carrot.jpg" alt="Post Image">
                             <div class="post-description">
                                 <p class="post-description-content"> ~저희 동네 당근마켓에 이런게 올라왔는데 이거 어떤가요?</p>
-                                <a href="/new-post" class="new-post-button">새 글 작성</a>
                                 <button class="detail-view">자세히보기</button>    
                             </div>
                             
@@ -72,9 +72,10 @@
                                     <article class="comment"><h3>댓글4</h3><p>나였으면 딴거 산다</p></article>
                                 </section>
                                 <section class="button-section">
-                                    <button class="comment-button" title="댓글 달기">
+                                    <a href = "/new-comment"><button class="comment-button" title="댓글 달기">
                                         <img src="../static/resource/comment.png" alt="Comment">
-                                    </button>
+                                    </button></a>
+                                    
                                     <button class="like-button title="좋아요 표시">
                                         <img src="../static/resource/good.png" alt="Good">
                                         <span class="like-count">0</span>
